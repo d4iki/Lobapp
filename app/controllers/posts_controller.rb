@@ -5,23 +5,28 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = Post.all
-    @user = current_user.id #idcheck
+    @user = User.find_by(id: current_user.id) #idcheck
+
 
   end
 
   # GET /posts/1 or /posts/1.json
   def show
+    @user = User.find_by(id: current_user.id) #idcheck
+
   end
 
   # GET /posts/new
   def new
     @post = Post.new
-    @user = current_user.id #idcheck
+    @user = User.find_by(id: current_user.id) #idcheck
+    # @user = current_user.id #idcheck
 
   end
 
   # GET /posts/1/edit
   def edit
+    
   end
 
   # POST /posts or /posts.json
