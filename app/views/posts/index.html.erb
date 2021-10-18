@@ -14,7 +14,7 @@
 <h1> @user <%= @user%></h1>
   <tbody>
     <% @posts.each do |post| %>
-      <% if @user == post.user_id %>
+      <% if @user == post.usert_id %>
         <tr>
           <td><%= post.user_id %></td>
           <td><%= post.title %></td>

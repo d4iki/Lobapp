@@ -9,6 +9,12 @@
   </head>
 
   <body>
+    <%if flash.notice%>
+      <p class="notice"><%= notice %></p>
+    <%end%>
+    <%if flash.alert%>
+      <p class="alert"><%= alert %></p>
+    <%end%> 
     <% if user_signed_in? %> <!-- ユーザーがログインしているか調べる -->
   <!-- ユーザーがログインしていた時の処理 -->
   <h2> 現在 <%= current_user.name %> さんがログインしています </h2>
